@@ -1,6 +1,6 @@
 # Unstated, without the create-react-context dependency
 
-Unstated currently still depends on create-react-context, which uses the deprecated lifecylce method `componentWillReceiveProps`. This package removes this dependency and can only be used with React 16+.
+Unstated currently still depends on create-react-context, which uses the deprecated lifecycle method `componentWillReceiveProps`. This package removes this dependency and can only be used with React 16+.
 
 # Unstated
 
