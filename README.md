@@ -1,14 +1,12 @@
-<div align="center">
-  <br><br><br><br><br>
-  <img src="https://raw.githubusercontent.com/thejameskyle/unstated/master/logo.png" alt="Unstated Logo" width="400">
-  <br><br><br><br><br><br><br><br>
-</div>
+# Unstated, without the create-react-context dependency
+
+Unstated currently still depends on create-react-context, which uses the deprecated lifecylce method `componentWillReceiveProps`. This package removes this dependency and can only be used with React 16+.
 
 # Unstated
 
 > State so simple, it goes without saying
 
-### :wave: [Check out the *-next version of Unstated with an all new React Hooks API &rarr;](https://github.com/jamiebuilds/unstated-next)
+### :wave: [Check out the \*-next version of Unstated with an all new React Hooks API &rarr;](https://github.com/jamiebuilds/unstated-next)
 
 ## Installation
 
@@ -130,8 +128,12 @@ const Amount = React.createContext(1);
 
 class Counter extends React.Component {
   state = { count: 0 };
-  increment = amount => { this.setState({ count: this.state.count + amount }); };
-  decrement = amount => { this.setState({ count: this.state.count - amount }); };
+  increment = amount => {
+    this.setState({ count: this.state.count + amount });
+  };
+  decrement = amount => {
+    this.setState({ count: this.state.count - amount });
+  };
   render() {
     return (
       <Amount.Consumer>
@@ -159,7 +161,11 @@ class AmountAdjuster extends React.Component {
       <Amount.Provider value={this.state.amount}>
         <div>
           {this.props.children}
-          <input type="number" value={this.state.amount} onChange={this.handleChange}/>
+          <input
+            type="number"
+            value={this.state.amount}
+            onChange={this.handleChange}
+          />
         </div>
       </Amount.Provider>
     );
@@ -168,7 +174,7 @@ class AmountAdjuster extends React.Component {
 
 render(
   <AmountAdjuster>
-    <Counter/>
+    <Counter />
   </AmountAdjuster>
 );
 ```
@@ -282,9 +288,9 @@ something that works in every browser.
 
 Next we'll need a piece to introduce our state back into the tree so that:
 
-* When state changes, our components re-render.
-* We can depend on our container's state.
-* We can call methods on our container.
+- When state changes, our components re-render.
+- We can depend on our container's state.
+- We can call methods on our container.
 
 For this we have the `<Subscribe>` component which allows us to pass our
 container classes/instances and receive instances of them in the tree.
@@ -518,4 +524,3 @@ render(
 ## Related
 
 - [unstated-debug](https://github.com/sindresorhus/unstated-debug) - Debug your Unstated containers with ease
- 
