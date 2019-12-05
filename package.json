@@ -20,7 +20,7 @@
     "typecheck": "flow",
     "test": "jest",
     "format": "prettier --write **/*.{js,json,md}",
-    "prepublish": "yarn clean && yarn build",
+    "prepublish": "npm run clean && npm run build",
     "precommit": "lint-staged",
     "example": "parcel example/index.html",
     "typescript": "tsc -p tsconfig.json"
