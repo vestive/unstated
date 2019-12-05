@@ -1,6 +1,6 @@
 {
   "name": "unstated-no-context-polyfill",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Unstated, without the create-react-context polyfill",
   "main": "lib/unstated.js",
   "module": "lib/unstated.es.js",
