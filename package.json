@@ -1,12 +1,15 @@
 {
   "name": "unstated-no-context-polyfill",
   "version": "1.0.0",
-  "description": "State so simple, it goes without saying",
+  "description": "Unstated, without the create-react-context polyfill",
   "main": "lib/unstated.js",
   "module": "lib/unstated.es.js",
   "types": "lib/unstated.d.ts",
-  "repository": "https://github.com/vestive/unstated",
-  "author": "James Kyle <me@thejameskyle.com>, modified by Vestive",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vestive/unstated.git"
+  },
+  "author": "James Kyle & Vestive",
   "license": "MIT",
   "files": [
     "lib"
@@ -23,7 +26,7 @@
     "typescript": "tsc -p tsconfig.json"
   },
   "peerDependencies": {
-    "react": "^15.0.0 || ^16.0.0"
+    "react": "^16.2.0"
   },
   "devDependencies": {
     "@types/react": "^16.0.36",
@@ -57,5 +60,17 @@
   },
   "jest": {
     "testURL": "http://localhost/"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/vestive/unstated/issues"
+  },
+  "homepage": "https://github.com/vestive/unstated#readme",
+  "directories": {
+    "example": "example",
+    "lib": "lib"
+  },
+  "dependencies": {},
+  "keywords": [
+    "unstated"
+  ]
 }
