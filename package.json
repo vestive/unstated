@@ -1,12 +1,12 @@
 {
-  "name": "unstated",
-  "version": "2.1.1",
+  "name": "unstated-no-context-polyfill",
+  "version": "1.0.0",
   "description": "State so simple, it goes without saying",
   "main": "lib/unstated.js",
   "module": "lib/unstated.es.js",
   "types": "lib/unstated.d.ts",
-  "repository": "https://github.com/thejameskyle/unstated",
-  "author": "James Kyle <me@thejameskyle.com>",
+  "repository": "https://github.com/vestive/unstated",
+  "author": "James Kyle <me@thejameskyle.com>, modified by Vestive",
   "license": "MIT",
   "files": [
     "lib"
